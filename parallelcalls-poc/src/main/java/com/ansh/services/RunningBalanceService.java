@@ -21,7 +21,7 @@ import java.util.concurrent.ExecutionException;
 public class RunningBalanceService {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		BalanceService balanceService = new BalanceService();
-		BalanceResponse balanceResponse = balanceService.getBalance("212121");
+		BalanceResponse balanceResponse = balanceService.getBalance("11");
 		System.out.println("Balance response is " + balanceResponse);
 	}
 }

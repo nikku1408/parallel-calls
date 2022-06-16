@@ -18,6 +18,7 @@ import com.ansh.model.CustomerResp;
  * @date : Jun 16, 2022
  * 
  */
+/* Webservice Output */
 public class CustomerServiceClient {
 	public CustomerResp getCustomerDetails(String customerId) {
 		CustomerResp customerResponse = new CustomerResp();

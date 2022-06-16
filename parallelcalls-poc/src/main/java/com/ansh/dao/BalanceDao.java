@@ -18,6 +18,7 @@ import com.ansh.model.BalanceDaoResp;
  * @date : Jun 16, 2022
  * 
  */
+/* Database Output */
 public class BalanceDao {
 	public BalanceDaoResp getBalance(String customerId) {
 		BalanceDaoResp balanceDaoResp = new BalanceDaoResp();

@@ -30,6 +30,7 @@ import com.ansh.tasks.CustomerTask;
  * 
  */
 public class BalanceService {
+
 	public BalanceResponse getBalance(String customerId) throws InterruptedException, ExecutionException {
 		/* Parallel call here 2 threads will call parallely */
 		BalanceResponse balanceResponse = new BalanceResponse();

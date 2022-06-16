@@ -30,11 +30,13 @@ public class CustomerTask implements Callable<TaskResult> {
 	}
 
 	public TaskResult call() throws Exception {
+		System.out.println("Starts customer task");
 		CustomerServiceClient customerServiceClient = new CustomerServiceClient();
 		CustomerResp customerResp = customerServiceClient.getCustomerDetails(customerId);
 		TaskResult taskResult = new TaskResult();
 		taskResult.setTaskName("Customer Task");
 		taskResult.setResult(customerResp);
+		System.out.println("Ends customer task");
 		return taskResult;
 	}
 

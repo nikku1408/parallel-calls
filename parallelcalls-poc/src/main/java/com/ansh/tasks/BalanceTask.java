@@ -31,11 +31,13 @@ public class BalanceTask implements Callable<TaskResult> {
 	}
 
 	public TaskResult call() throws Exception {
+		System.out.println("Starts balance task");
 		BalanceDao balanceDao = new BalanceDao();
 		BalanceDaoResp balanceDaoResp = balanceDao.getBalance(customerId);
 		TaskResult taskResult = new TaskResult();
 		taskResult.setTaskName("Balance Task");
 		taskResult.setResult(balanceDaoResp);
+		System.out.println("Ends balance task");
 		return taskResult;
 	}
 

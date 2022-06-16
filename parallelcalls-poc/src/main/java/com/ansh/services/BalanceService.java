@@ -50,11 +50,11 @@ public class BalanceService {
 				balanceResponse.setUnbilledAmount(balanceDaoResp.getUnbilledAmount());
 			} else if ("Customer Task".equals(result.getTaskName())) {
 				CustomerResp customerResp = (CustomerResp) result.getResult();
-				customerResp.setBankName(customerResp.getBankName());
-				customerResp.setBranch(customerResp.getBranch());
-				customerResp.setCardNum(customerResp.getCardNum());
+				balanceResponse.setBankName(customerResp.getBankName());
+				balanceResponse.setBranch(customerResp.getBranch());
+				balanceResponse.setCardNum(customerResp.getCardNum());
 			}
 		}
-		return null;
+		return balanceResponse;
 	}
 }

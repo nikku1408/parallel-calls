@@ -24,6 +24,6 @@ public class CustomerServiceClient {
 		customerResponse.setBankName("Barclays");
 		customerResponse.setBranch("London");
 		customerResponse.setCardNum("052123445869");
-		return null;
+		return customerResponse;
 	}
 }

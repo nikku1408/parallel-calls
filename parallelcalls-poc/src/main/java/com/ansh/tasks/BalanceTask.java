@@ -13,6 +13,8 @@ package com.ansh.tasks;
 
 import java.util.concurrent.Callable;
 
+import com.ansh.dao.BalanceDao;
+import com.ansh.model.BalanceDaoResp;
 import com.ansh.model.TaskResult;
 
 /**
@@ -22,8 +24,19 @@ import com.ansh.model.TaskResult;
  */
 public class BalanceTask implements Callable<TaskResult> {
 
+	private String customerId;
+
+	public BalanceTask(String customerId) {
+		this.customerId = customerId;
+	}
+
 	public TaskResult call() throws Exception {
-		return null;
+		BalanceDao balanceDao = new BalanceDao();
+		BalanceDaoResp balanceDaoResp = balanceDao.getBalance(customerId);
+		TaskResult taskResult = new TaskResult();
+		taskResult.setTaskName("Balance Task");
+		taskResult.setResult(balanceDaoResp);
+		return taskResult;
 	}
 
 }

@@ -19,7 +19,7 @@ import com.ansh.model.CustomerResp;
  * 
  */
 public class CustomerServiceClient {
-	public CustomerResp getCustomerDetails(String cardNum) {
+	public CustomerResp getCustomerDetails(String customerId) {
 		CustomerResp customerResponse = new CustomerResp();
 		customerResponse.setBankName("Barclays");
 		customerResponse.setBranch("London");

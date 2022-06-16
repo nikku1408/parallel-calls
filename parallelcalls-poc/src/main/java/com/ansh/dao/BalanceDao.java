@@ -19,7 +19,7 @@ import com.ansh.model.BalanceDaoResp;
  * 
  */
 public class BalanceDao {
-	private BalanceDaoResp getBalance(String cardNum) {
+	public BalanceDaoResp getBalance(String customerId) {
 		BalanceDaoResp balanceDaoResp = new BalanceDaoResp();
 		balanceDaoResp.setAvailableBalance("10000");
 		balanceDaoResp.setBilledAmount("90000");
